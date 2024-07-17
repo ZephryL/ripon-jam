@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Ripon Country Cottages Contact</title>
+        <meta name="description" content="Ripon Country Cottage Contact">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/vzBanner.css">
+        <script src="https://kit.fontawesome.com/6e969e8495.js" crossorigin="anonymous"></script>
+        <script src="libraries/d3.min.js"></script>
+        <script src="scripts/vzBanner.js"></script>
+        <script src="scripts/vzBannerData.js"></script>
+        <script src="scripts/vzFooter.js"></script>
+    </head>    
+    <body>
+        <div id="wait-overlay" style="display:none"></div>
+        <div id="wait-loader" class="waitloader"></div>
+        <div id="popup-dialog" class="popupdialog" style="display:none"></div>
+        <nav id="banner" class="banner"></nav>
+
+        <div class="content">
+            <div class="heading">
+                <h3 class="elmi">Head Over Our Way!</h3>
+            </div>
+            
+            <p>Ripon Farm is located in the KwaZulu/Natal province of South Africa, in an area known as the Southern Drakensberg. The closest large city is 
+                Pietermaritzburg. The closest towns are Himeville (10km) and Underberg (15km). Ripon is located at 29°40'21.0"S 29°31'36.4"E (or -29.672497, 29.526783).
+            </p>
+            
+            <div class="contact">
+                <div class="contactitem">
+                    <span class="fa-solid fa-lg fa-phone" style="color:steelblue"></span><span class="category">Erika Smith:</span><span class="value">+27-82-688-6759</span>
+                </div>
+                <div class="contactitem">
+                    <span class="fa-solid fa-lg fa-phone" style="color:steelblue"></span><span class="category">Ed Smith:</span><span class="value">+27-82-299-5234</span>
+                </div>
+                <div class="contactitem">
+                    <span class="fa-solid fa-lg fa-envelope" style="color:steelblue"></span><span class="category">Email:</span><span class="value">ripon@futurenet.co.za</span>
+                </div>
+            </div>
+
+            <div class="map">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=ripon%20country%20cottage&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <a href="https://123movies-to.org">123movies</a><br>
+                        <style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style>
+                        <a href="https://www.embedgooglemap.net"></a>
+                        <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+        <script>
+            vzBanner({
+                docElement: "#banner",
+                title: "Contact",
+                url: "url",
+                caption: "caption",
+                children: "children"}).update(vzBannerData);
+                
+            vzFooter({docElement: "#footer"})
+        </script>
+    </body>
+</html>

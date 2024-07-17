@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 1em / 1.3;
+    color:  rgb(65, 65, 65);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color:  rgb(167, 63, 6);
+    margin: 16px 0;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif, serif;
+    font-size: 1.2rem;
+    color:  rgb(167, 63, 6);
+    margin: 14px 0;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    color:  rgb(167, 63, 6);
+    margin: 16px 0;
+}
+
+p {
+    font-size: 1em;
+    margin: 4px 0 4px 0;
+}
+
+.elmi p {
+    font-size: 1em;
+    margin: 4px 0 4px 0;
+    text-align: center;
+    color: #946f5f;
+}
+
+ul {
+    list-style-position:outside;
+}
+
+div#wait-overlay {
+    opacity:    0.7; 
+    background: #000; 
+    width:      100%;
+    height:     100%; 
+    z-index:    10;
+    top:        0; 
+    left:       0; 
+    position:   fixed; 
+    text-align: center;
+}
+
+.hero {
+    display: block;
+    position: relative;
+}
+
+.hero img {
+    max-width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+.content {
+    width: 80%;
+    margin: 8px auto;
+}
+
+.content p {
+    color: #946f5f;
+    font-size: 16px;
+    margin: 8px 0 12px 0;
+    text-align: justify;
+    line-height: 1.2;
+}
+
+.content p.elmi {
+    margin: 8px 0 12px 0;
+    text-align:center; 
+    color: #946f5f;
+}
+
+.content p.smith {
+    margin: 8px 0 12px 0;
+    text-align: center;
+    color: rgb(42, 128, 42);
+    font-size: 20px;
+}
+
+.content li {
+    color: #0a0300;
+    font-size: 16px;
+    margin: 6px 0;
+    text-align: left;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* horizontally */
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 8px;
+
+}
+
+.contact .contactitem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #946F5F;
+    font-size: 16px;
+}
+
+.contact .contactitem span {
+    margin: 0 8px 0 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+}
+.ecards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 32px;
+}
+
+.property {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.property .description {
+    padding: 20px;
+    background-color: rgba(250, 248, 246, 0.989);
+}
+
+.property .terms {
+    padding: 20px;
+    background-color: rgba(250, 248, 246, 0.989);
+}
+
+.property .terms p {
+    color:  rgb(65, 65, 65);
+}
+
+.eproperty {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.eproperty .description {
+    padding: 15px;
+    background-color: rgba(250, 248, 246, 0.989);
+}
+
+.eproperty .description p {
+    color:  rgb(180, 85, 1);
+}
+
+.eproperty .terms {
+    padding: 15px;
+    background-color: rgb(253, 252, 251);
+}
+
+.eproperty .terms p {
+    color:  rgb(180, 85, 1);
+}
+
+.eproperty .third {
+    padding: 15px;
+    background-color: rgba(250, 248, 246, 0.989);
+}
+
+.eproperty .third p {
+    color:  rgb(180, 85, 1);
+}
+
+footer {
+    background-color: rgb(126, 126, 126);
+}
+
+footer .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+}
+
+footer .link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 12px;
+}
+
+@media (max-width: 960px) {
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .content {
+        width: 95%;
+    }
+    
+    .contact {
+        flex-direction: column;
+        justify-content: flex-start;
+    }   
+    
+    .contact .contactitem {
+        margin: 8px 0;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .eproperty {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+@font-face {
+    font-family: 'didot_lt_stditalic';
+    src: url('../fonts/didot_lt_std_italic-webfont.woff2') format('woff2'),
+         url('../fonts/didot_lt_std_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

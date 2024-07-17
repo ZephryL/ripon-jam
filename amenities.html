@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Ripon Country Cottages Amenities</title>
+        <meta name="description" content="Ripon Country Cottages Amenities">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/vzBanner.css">
+        <link rel="stylesheet" href="styles/vzGallery.css">
+        <link rel="stylesheet" href="styles/vzGalleryViewer.css">
+        <script src="https://kit.fontawesome.com/6e969e8495.js" crossorigin="anonymous"></script>
+        <script src="libraries/d3.min.js"></script>
+        <script src="scripts/vzBanner.js"></script>
+        <script src="scripts/vzBannerData.js"></script>
+        <script src="scripts/vzFooter.js"></script>
+        <script src="scripts/vzGallery.js"></script>
+        <script src="scripts/vzGalleryViewer.js"></script>
+    </head>    
+    <body>
+        <div id="wait-overlay" style="display:none"></div>
+        <div id="wait-loader" class="waitloader"></div>
+        <div id="gallery-dialog" class="gallerydialog" style="display:none"></div>
+        <nav id="banner" class="banner"></nav>
+       
+        <div class="hero">
+            <img src="images/strip_amenities.jpg" />
+        </div>
+        
+        <div class="content">            
+            <div class="eproperty">
+                
+                <div class="description">                    
+                    <div class="heading">
+                        <h1>Ripon</h1>
+                    </div>
+
+                    <ul>
+                        <p class="smith">Nguni Stroking</p>
+                        <div class="heading">
+                        <img src="images/gallery-main/ripon_9.jpg" width=200px style="border-radius: 50%";/>
+                        <p class="smith">Cow Calling</p>
+                        <div class="heading">
+                        <img src="images/amenities1/amenities_5.jpg" width=200px style="border-radius: 50%";/>
+                        <p class="smith">Mountain Biking</p>
+                        <div class="heading">
+                        <img src="images/amenities1/amenities_6.jpg" width=200px style="border-radius: 50%";/>
+                        <p class="smith">Trail Running</p>
+                    </ul>
+                    </div>
+
+                <div class="terms">
+                    <div class="heading">
+                        <h1>&</h1>
+                    </div>
+
+                    <ul>
+                        <p class="smith">Snowing</p>
+                        <div class="heading">
+                        <img src="images/gallery-main/ripon_6.jpg" width=200px style="border-radius: 50%";/>
+                        <p class="smith">Incredible Scenery</p>
+                        <div class="heading">
+                        <img src="images/amenities1/amenities_4.jpg" width=200px style="border-radius: 50%";/>
+                        <p class="smith">Dog Playing</p>
+                        <div class="heading">
+                        <img src="images/amenities1/amenities_7.jpg" width=200px style="border-radius: 50%";/>
+                        <p class="smith">Bass Fishing</p>
+                    </ul>
+                    </div>
+
+                <div class="third">
+                    <div class="heading">
+                        <h1>Surrounds</h1>
+                    </div>
+                            
+                    <ul>
+                        <p class="smith">Sani Pass</p>
+                        <p class="smith">Lesotho</p>
+                        <p class="smith">Sani Top </p>
+                        <p class="smith">The Giants Cup</p>
+                        <p class="smith">Sani Valley</p>
+                        <p class="smith">uKhahlamba Maloti Drakensberg Park</p>
+                        <p class="smith">Snow on the Berg</p>
+                        <p class="smith">Professional Birding Tours</p>
+                        <p class="smith">Sani Spoors Mountain Bike Trails</p>
+                        <p class="smith">Himeville Museum</p>
+                        <p class="smith">Rafting</p>
+                        <p class="smith">Tubing</p>
+                        <p class="smith">uMzimkulu River</p>
+                        <p class="smith">Himeville Arms</p>
+                    </ul>
+                    </div> 
+            </div> 
+
+            <div class="contact">
+                <div class="contactitem">
+                    <span class="fa-solid fa-lg fa-phone" style="color:steelblue"></span><span class="category">Erika Smith:</span><span class="value">+27-82-688-6759</span>
+                </div>
+                <div class="contactitem">
+                    <span class="fa-solid fa-lg fa-phone" style="color:steelblue"></span><span class="category">Ed Smith:</span><span class="value">+27-82-299-5234</span>
+                    </div>
+                <div class="contactitem">
+                    <span class="fa-solid fa-lg fa-envelope" style="color:steelblue"></span><span class="category">Email:</span><span class="value">ripon@futurenet.com</span>
+                </div>
+            </div>
+
+            </div>    
+                <footer id="footer"></footer>
+            </div>
+        </div> 
+
+        <script>
+            vzBanner({
+                docElement: "#banner",
+                title: "Amenities",
+                url: "url",
+                caption: "caption",
+                children: "children"}).update(vzBannerData);
+                
+            vzFooter({docElement: "#footer"}) 
+        </script>
+        
+    </body>
+</html>

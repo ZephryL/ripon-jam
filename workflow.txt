@@ -1,0 +1,22 @@
+
+PSCP website
+------------
+1. In powershell, bulk copy website recursively: 
+pscp -r C:\StaticProj\ripon-jam\* zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html
+
+                    or, for a particular file
+
+pscp C:\StaticProj\ripon-jam\index.html zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html/index.html
+
+                    or, targeted
+
+pscp C:\StaticProj\ripon-jam\*.html zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html
+pscp C:\StaticProj\ripon-jam\scripts\* zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html/scripts
+pscp C:\StaticProj\ripon-jam\styles\* zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html/styles
+
+
+UPDATE website
+Workflow
+Power shell
+Copy path
+Enter pw

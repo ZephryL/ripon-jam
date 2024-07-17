@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Ripon Country Cottages Gallery</title>
+        <meta name="description" content="Ripon Country Cottages Gallery">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/vzBanner.css">
+        <link rel="stylesheet" href="styles/vzGallery.css">
+        <link rel="stylesheet" href="styles/vzGalleryViewer.css">
+        <script src="libraries/d3.min.js"></script>
+        <script src="https://kit.fontawesome.com/6e969e8495.js" crossorigin="anonymous"></script>
+        <script src="scripts/vzBanner.js"></script>
+        <script src="scripts/vzBannerData.js"></script>
+        <script src="scripts/vzFooter.js"></script>
+        <script src="scripts/vzGallery.js"></script>
+        <script src="scripts/vzGalleryViewer.js"></script>
+    </head>
+    <body>
+        <div id="wait-overlay" style="display:none"></div>
+        <div id="wait-loader" class="waitloader"></div>
+        <div id="gallery-dialog" class="gallerydialog" style="display:none"></div>
+        <nav id="banner" class="banner"></nav>
+        <div id="gallery-main" class="gallery"></div>
+        <footer id="footer"></footer>
+        <script>
+            vzBanner({
+                docElement: "#banner",
+                title: "Gallery",
+                url: "url",
+                caption: "caption",
+                children: "children"}).update(vzBannerData);
+
+            vzGallery({
+                docElement: "#gallery-main",
+                folder: "images/gallery-main",
+                prefix: "ripon_",
+                count: 32,
+                onEvent: onGalleryEvent
+            }).update();
+
+            // initiate a popup dialog
+            let vGalleryViewer = vzGalleryViewer({
+                docPopup: document.getElementById("gallery-dialog"),
+                docOverlay: document.getElementById("wait-overlay"),
+                folder: "images/gallery-main",
+                prefix: "ripon_",
+                count: 32,
+                onEvent: onViewerEvent
+            });
+            
+            function onGalleryEvent(d) {
+                if (d.event === "click") {
+                    vGalleryViewer.open(d.index);
+                }
+            }
+            
+            function onViewerEvent(aEvent) {
+                vGalleryViewer.close();
+            }
+            
+            vzFooter({docElement: "#footer"})
+        </script>
+    </body>
+</html>

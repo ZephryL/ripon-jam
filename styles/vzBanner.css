@@ -1,0 +1,150 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #fff;
+    color: #000;
+}
+
+.logo {
+    display: flex;
+    align-items:center;
+}
+
+.logo img {
+    padding-right: 20px;
+}
+
+.logo h1 {
+    color: rgb(10, 10, 10);
+}
+
+.menu ul {
+    list-style-type: none;
+    z-index: 1000;
+}
+
+.menu a {
+    color: #000;
+    text-decoration: none!important;
+    font-weight: bold;
+}
+
+.root {
+    display: flex;
+    gap: 8px;
+    font-size: 20px;
+}
+
+.root li {
+    padding: 5px 14px;
+    position: relative;
+    border-radius: 3px;
+}
+
+.root li a {
+    color: #3c3c3c;
+}
+
+.root li:hover {
+    background-color: #f4d385;
+    transition: 0.3s ease;
+    display: block;
+}
+
+.child {
+    background-color: rgb(218, 179, 70);
+    padding: 8px 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 3px;
+    top: 30px;
+    right: 0px;
+}
+
+.child li + li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.child li {
+    padding: 0px 0.9em;
+    width: 215px;
+    text-align: right;
+    color: #fff;
+    border-radius: 0;
+    font-size: 16px
+}
+
+.child li:hover {
+    background-color: #f8bc26;
+}
+
+.child li a {
+    color: #fff;
+}
+
+li:hover .child {
+    display: block;
+}
+
+.banner input[type=checkbox]{
+    display: none;
+} 
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .banner {
+        padding: 2px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+
+    input[type=checkbox]:checked ~ .root {
+        display: block;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .root { 
+        display:none;
+        position: absolute;
+        background-color:rgb(221, 181, 122);
+        right: 0;
+        left: 0;
+        text-align: start;
+        padding: 16px 0;
+    }
+    .root li:hover {
+        display: inline-block;
+        background-color: #fdecb5;
+        transition: 0.3s ease;
+    }
+    .root li + li {
+        margin-top: 12px;
+    }
+   
+    .child {
+        left: 80px;
+        top:25;
+        /* transform: translateX(35%); */
+    }
+   .child li:hover {
+        background-color: #b49104;
+    }
+
+    .root li {
+        width: 100%;
+    }
+}

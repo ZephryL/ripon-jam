@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Ripon Country Cottages</title>
+        <meta name="description" content="Ripon Country Cottages">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/vzBanner.css">
+        <script src="https://kit.fontawesome.com/6e969e8495.js" crossorigin="anonymous"></script>
+        <script src="libraries/d3.min.js"></script>
+        <script src="scripts/vzBanner.js"></script>
+        <script src="scripts/vzBannerData.js"></script>
+        <script src="scripts/vzFooter.js"></script>
+    </head>    
+    <body>
+        <div id="wait-overlay" style="display:none"></div>
+        <div id="wait-loader" class="waitloader"></div>
+        <div id="popup-dialog" class="popupdialog" style="display:none"></div>
+        <nav id="banner" class="banner"></nav>
+
+        <div class="hero">
+            <img src="images/strip_sani_winter.jpg" />
+        </div>
+
+        <div class="content">
+            <div class="heading">
+                <h3>Come Stay with us. We are Off the Grid!</h3>
+            </div>
+            <p>Nestled in the valley below the famous Sani Pass, Ripon Farm views the winding road up into Lesotho and on clear nights the Sani Top 
+                Chalet is visible on the skyline. The homestead is flanked by two generous, self-catering cottages situated on a north-facing slope with
+                spectacular views of the Berg. 
+            </p>
+            <p>Ripon Country Cottage, the larger of the two, and Granny Smith Cottage are available all year round for rent, and bookings can be made directly
+                with the owners, Ed and Erika Smith.
+            </p>
+            <p>While Ripon is a working farm, guests can walk freely amongst the Nguni herd (and stroke a tame calf) on the 187ha extent. Two farm dams 
+                with bass fishing are available and rods can be hired on site. The views of The Giants Cup and Sani Valley, within the uKhahlamba Maloti 
+                Drakensberg Park, are truly spectacular.
+            </p>
+            <p>We can assist with booking of tours to Sani Pass as well as professional Birding Tours with an experienced guide. The Underberg area is an 
+                ideal Mountain Biking and Trail Running play ground, and guests have free access to the incredible Sani Spoors mountain bike trails. 
+                Visit their website for more information. Long quiet gravel district roads also provide ideal training roads for cyclists and runners. 
+                Himeville Museum is highly rated and a pleasant outing.</p>
+            <p>Rafting and Tubing is available in Underberg in season and Mountain biking is a year round activity. The uMzimkulu River offers paddlers 
+                clear and clean waters to enjoy.
+            </p>
+
+            <div class="heading">
+                <h3>Meet the Team</h3>
+                <img src="images/hosts.jpg" width=200px style="border-radius: 50%";/>
+                <h2>Erika and Ed Smith</h2>
+            </div>
+            <p class="elmi">
+                Erika and Ed are your hosts and will assist with all queries. They have many years of shared experience as guesthouse hosts, and will 
+                ensure a superlative stay. Erika is fluent in German, Afrikaans and English.
+            </p>
+            <div class="contact">
+                <div class="contactitem">
+                    <span class="fa-solid fa-lg fa-phone" style="color:steelblue"></span><span class="category">Erika Smith:</span><span class="value">+27-82-688-6759</span>
+                </div>
+                <div class="contactitem">
+                    <span class="fa-solid fa-lg fa-phone" style="color:steelblue"></span><span class="category">Ed Smith:</span><span class="value">+27-82-299-5234</span>
+                </div>
+                <div class="contactitem">
+                    <span class="fa-solid fa-lg fa-envelope" style="color:steelblue"></span><span class="category">Email:</span><span class="value">ripon@futurenet.com</span>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+        <script>
+            vzBanner({
+                docElement: "#banner",
+                title: "Home",
+                url: "url",
+                caption: "caption",
+                children: "children"}).update(vzBannerData);
+            vzFooter({docElement: "#footer"})
+        </script>
+    </body>
+</html>

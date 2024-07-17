@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Ripon Country Cottages Availability</title>
+        <meta name="description" content="Ripon Country Cottages Availability">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <script src="libraries/d3.min.js"></script>
+    </head>    
+    <body>        
+        <div id="availability"></div>
+        <script>
+            
+            let data = [
+                {unit: "Cottage 1", occupation: [
+                    {dt: "2022-08-18T00:00:00Z", confirmed: true},
+                    {dt: "2022-08-19T00:00:00Z", confirmed: true},
+                    {dt: "2022-08-20T00:00:00Z", confirmed: true}
+                ]},
+                {unit: "Cottage 2", occupation: [
+                    {dt: "2022-08-20T00:00:00Z", confirmed: true},
+                    {dt: "2022-08-21T00:00:00Z", confirmed: true},
+                    {dt: "2022-08-22T00:00:00Z", confirmed: false}
+                ]}
+            ]
+
+            let vUnitArray = data.map(function (item,i) {
+                return {unit: item.unit, id: i};
+            });
+
+            const dateFormatDay = d3.timeFormat("%a %d");
+            const margin = {top: 20, bottom: 20, right: 10, left: 300};
+            const width = 1500 - margin.right - margin.left;
+            const vDaySize = 60;
+            const height = vDaySize * vUnitArray.length; // -margin.top - margin.bottom;
+
+            let timeDomainStart = d3.timeDay.offset(new Date(), -1).setHours(12,0,0);
+            let timeDomainEnd = new Date(d3.timeDay.offset(new Date(), 0).setHours(Math.floor(width / vDaySize) * 24));
+
+            let xScale = d3.scaleTime()
+                .domain([ timeDomainStart, timeDomainEnd ])
+                .range([ 0, width ]);
+            let xAxis = d3.axisBottom(xScale)
+                .ticks(d3.timeDay)
+                .tickSize(-height)
+                .tickFormat(d => dateFormatDay(d))
+
+            let yScale = d3.scaleBand()
+                .domain(vUnitArray)
+                .range([height, 0]);
+            let yAxis = d3.axisLeft(yScale)
+                .ticks(vUnitArray.length)
+                .tickSize(-width)
+                .tickFormat(function(d) {
+                    return d.unit;
+                })
+
+            let zoom = d3.zoom()
+                .on("zoom", zoomed);
+
+            let svg = d3.select('#availability')
+                .append('svg')
+                .attr("fill", "#777")
+                .attr('width', width + margin.left + margin.right)
+                .attr('height', height + margin.top + margin.bottom)
+                .append('g')
+                .attr('transform', 'translate ('+margin.left+','+margin.top+')')
+                .call(zoom);
+
+            svg.append('rect')
+                .attr("class", "bar")
+                .attr('width', width)
+                .attr('height', height);
+
+            let vizXAxis = svg.append('g')
+                .attr('class', 'x axis')
+                .attr('transform', 'translate(0,'+height+')')
+                .call(xAxis)
+
+            svg.append('g')
+                .attr('class', 'y axis')
+                .call(yAxis)
+
+
+            function zoomed(){
+                var vTransform = d3.event.transform;
+                vTransform.k = 1;
+                xAxis.scale(vTransform.rescaleX(xScale));
+                vizXAxis.call(xAxis)
+            }
+
+        </script>
+    </body>
+</html>
