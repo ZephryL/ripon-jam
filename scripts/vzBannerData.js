@@ -2,7 +2,9 @@ let vzBannerData = [
     {url: "index.html", caption: "Home", children: []},
     {url: "accomodation.html", caption: "Accommodation", children: [        
         {url: "cottage1.html", caption: "Ripon Country Cottage", children: []},
-        {url: "cottage2.html", caption: "Granny Smith Cottage", children: []}
+        {url: "cottage2.html", caption: "Granny Smith Cottage", children: []},
+        {url: "cottage3.html", caption: "Nguni Cottage", children: []},
+        {url: "campsite1.html", caption: "Umtshitshi Camp", children: []}
     ]},
     {url: "amenities.html", caption: "Amenities", children: []},
     {url: "gallery.html", caption: "Gallery", children: []},
