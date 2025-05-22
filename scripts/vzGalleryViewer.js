@@ -58,12 +58,12 @@ function vzGalleryViewer(aOptions) {
                 aIndex--
             }
             vizImageDiv.innerHTML = "";
-            vizImageDiv.insertAdjacentHTML("beforeend", `<img class="image" src=${o.folder}/${o.prefix}${aIndex}.jpg />`);
+            vizImageDiv.insertAdjacentHTML("beforeend", `<img src=${o.folder}/${o.prefix}${aIndex}.jpg />`);
         })
 
         var vizImageDiv = document.createElement('div');
         vizImageDiv.classList.add("image");
-        vizImageDiv.insertAdjacentHTML("beforeend", `<img class="image" src=${o.folder}/${o.prefix}${aIndex}.jpg />`);
+        vizImageDiv.insertAdjacentHTML("beforeend", `<img src=${o.folder}/${o.prefix}${aIndex}.jpg />`);
         vizImageSlider.insertAdjacentElement("beforeend", vizImageDiv);
 
         // next button
@@ -79,7 +79,7 @@ function vzGalleryViewer(aOptions) {
                 aIndex++
             }
             vizImageDiv.innerHTML = "";
-            vizImageDiv.insertAdjacentHTML("beforeend", `<img class="image" src=${o.folder}/${o.prefix}${aIndex}.jpg />`);
+            vizImageDiv.insertAdjacentHTML("beforeend", `<img src=${o.folder}/${o.prefix}${aIndex}.jpg />`);
         })
         
         o.docPopup.insertAdjacentElement("beforeend", vizImageSlider);

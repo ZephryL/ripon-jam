@@ -1,18 +1,21 @@
 
 PSCP website
 ------------
-1. In powershell, bulk copy website recursively: 
-pscp -r C:\StaticProj\ripon-jam\* zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html
+1. In powershell for Windows or Terminal for MacOS, bulk copy website recursively. NOTE: in MacOS, the command is "scp" without the "p":
+
+                    all files, recursivelyy
+
+pscp -r Developer/ripon-jam/* zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html
 
                     or, for a particular file
 
-pscp C:\StaticProj\ripon-jam\index.html zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html/index.html
+pscp Developer/ripon-jam/index.html zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html/index.html
 
-                    or, targeted
+                    or, targeted wildcards
 
-pscp C:\StaticProj\ripon-jam\*.html zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html
-pscp C:\StaticProj\ripon-jam\scripts\* zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html/scripts
-pscp C:\StaticProj\ripon-jam\styles\* zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html/styles
+pscp Developer/ripon-jam/*.html zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html
+pscp Developer/ripon-jam/scripts\* zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html/scripts
+pscp Developer/ripon-jam/styles\* zephman@www.ripon.co.za:/var/www/ripon.co.za/public_html/styles
 
 
 UPDATE website
